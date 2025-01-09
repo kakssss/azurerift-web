@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import logo from "../../public/images/white-logo.png";
-import svg from "../../public/images/svg/gptw.svg";
+import svg from "../../public/images/svg/logo.svg";
 import ServicesDropdown from './ServicesDropdown';
 const Navbar = () => {
   // Add active class
@@ -281,7 +281,7 @@ const Navbar = () => {
                 </Link> */}
 
                 {/* Replacing the button with an SVG */}
-                <Image src={svg} alt="Great Place to Work" width={150} height={37} />
+                <Image src={svg} alt="Great Place to Work" width={50} height={50} />
 
               </div>
             </div>
