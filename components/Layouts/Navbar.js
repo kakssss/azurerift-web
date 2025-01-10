@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import logo from "../../public/images/white-logo.png";
-import svg from "../../public/images/svg/logo.svg";
+import svg from "../../public/images/animated-favicon.gif";
 import ServicesDropdown from './ServicesDropdown';
 const Navbar = () => {
   // Add active class
@@ -44,6 +44,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-md navbar-light">
           <div className="container">
             <Link href="/" className="navbar-brand">
+            <Image src={svg} alt="Great Place to Work" width={50} height={50}     style={{ borderRadius: '50%' }}  />
               <Image src={logo} alt="logo" width={150} height={37} />
             </Link>
 
@@ -281,7 +282,7 @@ const Navbar = () => {
                 </Link> */}
 
                 {/* Replacing the button with an SVG */}
-                <Image src={svg} alt="Great Place to Work" width={50} height={50} />
+                {/* <Image src={svg} alt="Great Place to Work" width={50} height={50}     style={{ borderRadius: '50%' }}  /> */}
 
               </div>
             </div>

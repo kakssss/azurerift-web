@@ -2989,22 +2989,61 @@ Industries Area Four Style
 /*
 Team Area Four Style
 ======================================================*/
+.team-area {
+  background-color: #0f172a; /* Dark background */
+}
+
 .single-team {
   text-align: center;
   padding: 30px;
-  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(180deg, #000000, #000000, #001b1b);
   margin-bottom: 30px;
   transition: all 0.6s ease;
-  background-color: #fff;
+  position: relative;
+  border-radius: 12px;
+  /* Creating multiple layers for the neon effect */
+  box-shadow: 
+    0 0 1px rgb(0, 0, 0),
+    0 0 5px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(0, 255, 255, 0.212),
+    inset 0 0 10px rgba(0, 255, 255, 0.5);
 }
+
+.single-team:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  /* background: linear-gradient(45deg, #00ffff, #0066ff, #00ffff); */
+  border-radius: 12px;
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.single-team:hover:before {
+  opacity: 1;
+}
+
+.single-team:hover {
+  transform: translateY(-5px);
+}
+
 .single-team .team-single-img {
   position: relative;
   margin-top: 15px;
   margin-bottom: 55px;
 }
+
 .single-team .team-single-img img {
   border-radius: 50%;
+  /* border: 2px solid #00ffff; */
+  padding: 5px;
 }
+
 .single-team .team-single-img .team-img {
   position: absolute;
   top: 0;
@@ -3016,32 +3055,100 @@ Team Area Four Style
   display: flex;
   animation: rotation 20s linear infinite;
 }
+
+/* Adding a cyan glow to the rotating image */
+/* .single-team .team-single-img .team-img img {
+  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+} */
+
 .single-team .team-content h3 {
-  color: #212121;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
 }
+
 .single-team .team-content span {
   margin-bottom: 15px;
   display: block;
+  color: #00ffff;
 }
+
 .single-team .team-content ul {
   line-height: 1;
   padding: 0;
   margin: 0;
 }
+
 .single-team .team-content ul li {
   display: inline-block;
   padding: 0 5px;
 }
+
 .single-team .team-content ul li a {
-  background-color: #fafafa;
+  background-color: rgba(0, 255, 255, 0.1);
   width: 30px;
   height: 30px;
   line-height: 30px;
-}
-.single-team .team-content ul li a:hover {
-  animation: rubberBand 1s linear;
+  display: block;
+  border-radius: 50%;
+  color: #00ffff;
+  transition: all 0.3s ease;
 }
 
+.single-team .team-content ul li a:hover {
+  background-color: #00ffff;
+  color: #000000;
+  animation: rubberBand 1s linear;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+/* Section title styles */
+.section-title.home-four-section-title span {
+  color: #00ffff;
+}
+
+.section-title.home-four-section-title h2 {
+  color: #ffffff;
+}
+
+.section-title.home-four-section-title p {
+  color: #88ccff;
+}
+
+/* Animation for the team shape rotation */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation for social icons */
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
 /*====================================================
 HOME FIVE STYLE
 ======================================================*/
