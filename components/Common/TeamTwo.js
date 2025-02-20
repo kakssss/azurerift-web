@@ -87,12 +87,10 @@ const TeamTwo = () => {
       <section className="team-area pb-70">
         <div className="container">
           <div className="section-title home-four-section-title">
-            <span>Team</span>
-            <h2>Meet Our Genius Team</h2>
+            <span>Our Team</span>
+            <h2>Meet Our Legal Experts</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-              eos ea obcaecati et similique incidunt animi, sed, quos officiis
-              placeat. Id ipsa molestias.
+              We have a dedicated team of highly experienced legal professionals specializing in various fields, including corporate law, litigation, real estate, and more.
             </p>
           </div>
 

@@ -1,42 +1,3 @@
-// import Navbar from "../components/Layouts/Navbar";
-// import MainBanner from "../components/HomeOne/MainBanner";
-// import Features from "../components/HomeOne/Features";
-// import About from "../components/HomeOne/About";
-// import WhyChooseUs from "../components/HomeOne/WhyChooseUs";
-// import Services from "../components/HomeOne/Services";
-// import MakeYourBusiness from "../components/Common/MakeYourBusiness";
-// import WhatWeOffer from "../components/HomeOne/WhatWeOffer";
-// import Testimonials from "../components/Common/Testimonials";
-// import News from "../components/Common/News";
-// import Footer from "../components/Layouts/Footer";
-
-// export default function IndexPage() {
-//   return (
-//     <>
-//       <Navbar />
-
-//       <MainBanner />
-
-//       <Features />
-
-//       <About />
-
-//       <WhyChooseUs />
-
-//       <Services />
-
-//       <MakeYourBusiness />
-
-//       <WhatWeOffer />
-
-//       <Testimonials />
-
-//       <News />
-
-//       <Footer />
-//     </>
-//   );
-// }
 import React from "react";
 import Navbar from "../components/Layouts/Navbar";
 import MainBanner from "../components/HomeFour/MainBanner";
@@ -44,7 +5,7 @@ import PartnerSliderTwo from "../components/Common/PartnerSliderTwo";
 import About from "../components/HomeFour/About";
 import Services from "../components/HomeFour/Services";
 import WhyChooseUs from "../components/HomeFour/WhyChooseUs";
-import MakeYourBusiness from "../components/HomeFour/MakeYourBusiness";
+import MakeYourBusiness from "../components/Common/MakeYourBusiness";
 import WhatWeOffer from "../components/HomeFour/WhatWeOffer";
 import Team from "../components/Common/Team";
 import CaseStudies from "../components/HomeFour/CaseStudies";
@@ -60,19 +21,36 @@ export default function Index4Page() {
       <div className="body-bg-color">
         <Navbar />
 
-        <MainBanner />
+        <MainBanner 
+            title = "Welcome to Sahel Law Firm"
+            description = "Your Trusted Legal Partner in Saudi Arabia"
+            buttonText1 = "About Us"
+            buttonText2 = "Contact Us"
+        />
 
         <PartnerSliderTwo />
 
-        <About />
+        <About
+            title = "About Us"
+            description = "To provide expert legal services and guidance to individuals, businesses, and investors navigating the Saudi Arabian legal landscape."
+        />
 
-        <Services />
+        <Services
+            title = "Our Main Services"
+        />
 
-        <WhyChooseUs />
+        <WhyChooseUs
+             title ="Why Choose Sahel Law Firm?"
+        />
 
-        <MakeYourBusiness />
+        <MakeYourBusiness
+            title = "Our Mission"
+            description = "To provide expert legal services and guidance to individuals, businesses, and investors navigating the Saudi Arabian legal landscape."
+        />
 
-        <WhatWeOffer />
+        <WhatWeOffer 
+             title="Our Services"
+        />
 
         <CaseStudies />
 
@@ -86,7 +64,9 @@ export default function Index4Page() {
 
         <News />
 
-        <Footer />
+        <Footer 
+            footerText = "© 2025 Sahel Law Firm. All Rights Reserved."
+        />
       </div>
     </>
   );

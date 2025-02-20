@@ -6,7 +6,7 @@ import logo from "../../public/images/white-logo.png";
 import shape1 from "../../public/images/shape/footer-shape-one.png";
 import shape2 from "../../public/images/shape/footer-shape-two.png";
 
-const Footer = () => {
+const Footer = ({footerText}) => {
   const currentYear = new Date().getFullYear();
   return (
     <>
@@ -25,7 +25,7 @@ const Footer = () => {
                 </Link>
 
                 <p>
-                  We are a passionate team dedicated to delivering innovative and scalable solutions. From design to deployment, we help businesses across industries drive growth through technology and services.
+                  We are a dedicated legal team providing expert guidance in Saudi Arabia. Our mission is to assist individuals, businesses, and investors navigating the legal landscape.
                 </p>
 
                 <ul className="social-icon">
@@ -65,37 +65,31 @@ const Footer = () => {
                   <li>
                     <Link href="/services/service-details/">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      Big Data Solutions
+                      Litigation Services
                     </Link>
                   </li>
                   <li>
                     <Link href="/services/service-details/">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      UI/UX Design & Development
+                      Corporate Law
                     </Link>
                   </li>
                   <li>
                     <Link href="/services/service-details/">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      Desktop Applications
+                      Real Estate Law
                     </Link>
                   </li>
                   <li>
                     <Link href="/services/service-details/">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      Mobile App Development
+                      Debt Collection
                     </Link>
                   </li>
                   <li>
                     <Link href="/services/service-details/">
                       <i className="right-icon bx bx-chevrons-right"></i>
-                      Product Engineering
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/service-details/">
-                      <i className="right-icon bx bx-chevrons-right"></i>
-                      Machine Learning
+                      Legal Consultation
                     </Link>
                   </li>
                 </ul>
@@ -148,6 +142,12 @@ const Footer = () => {
                       Testimonials
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/blog">
+                      <i className="right-icon bx bx-chevrons-right"></i>
+                      Blog & Resources
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -171,15 +171,15 @@ const Footer = () => {
                   <li className="address">
                     <i className="flaticon-envelope"></i>
                     <span>Email</span>
-                    <a href="mailto:neelanjan.chakraborty@azurerift.in">
-                      neelanjan.chakraborty@azurerift.in
+                    <a href="mailto:info@sahellawfirm.com">
+                      info@sahellawfirm.com
                     </a>
                   </li>
 
                   <li className="address">
                     <i className="flaticon-maps-and-flags"></i>
                     <span>Address</span>
-                    456, Brigade Road, Bangalore, Karnataka, India
+                    Riyadh, Saudi Arabia
                   </li>
                 </ul>
               </div>
@@ -199,7 +199,7 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-lg-4">
               <div className="copy-right">
-                <p>Copyright &copy; {currentYear} AzureRift. All Rights Reserved</p>
+                <p>{footerText}</p>
               </div>
             </div>
 
